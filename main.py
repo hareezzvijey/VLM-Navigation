@@ -84,9 +84,9 @@ Examples:
         )
         
         if llm_client.load():
-            print("  ✅ LLM loaded successfully")
+            print("LLM loaded successfully")
         else:
-            print("  ⚠️ LLM failed to load. Falling back to rule-based.")
+            print("LLM failed to load. Falling back to rule-based.")
             llm_client = None
         print("=" * 60)
 
