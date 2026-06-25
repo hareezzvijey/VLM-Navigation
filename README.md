@@ -40,13 +40,13 @@ The system outputs structured navigation decisions (action, risk level, free-spa
 
 ### Detection & Navigation Visualization
 
-![Detection Output](outputs/output_sample.png)
+![Detection Output](outputs/output_sample2.png)
 
 *Bounding boxes with class labels and distances, surface mask overlays, and free-space corridor highlighting (green = walkable, yellow = crowded, red = blocked).*
 
 ### Depth Heatmap
 
-![Depth Output](outputs/output_depth_sample.png)
+![Depth Output](outputs/output_depth_sample2.png)
 
 *Depth overlay from MiDaS (blue = near, red = far).*
 
