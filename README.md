@@ -56,26 +56,22 @@ The system outputs structured navigation decisions (action, risk level, free-spa
 ============================================================
   NAVIGATION OUTPUT
 ============================================================
-  ACTION: move_forward
-  RISK  : LOW
-  SOURCE: LLM
+  ACTION  : MOVE_FORWARD_CAUTIOUS
+  RISK    : LOW
+  SOURCE  : LLM
 
   [GUIDANCE]
-  "Move forward. The path ahead is clear."
+  Move forward cautiously. Risk: LOW.
 
   [SPATIAL MAP]
-  Left  : walkable   | sidewalk(near)
-  Center: walkable   | sidewalk(near)
-  Right : blocked    | cone(mid), tree(far)
+  Left  : crowded    | barrier(near), car(mid)
+  Center: walkable   | person(mid), person(mid), car(far)
+  Right : blocked    | car(near), car(mid), tree(near)
 
   [ACCESSIBILITY]
-  Surface: smooth
-  Hazards: none
-  Width: adequate (>1.2m)
-
-  [CONTEXT]
-  Sidewalk detected ahead. Two people visible at mid distance.
-  Traffic cones on the right side.
+  Surface  : smooth
+  Hazards  : pothole (near)
+  Width    : adequate (>1.2m)
 ============================================================
 ```
 
