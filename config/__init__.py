@@ -1,5 +1,64 @@
+# """
+# Configuration module - central import point for all configs
+# """
+# from .paths import BASE_DIR, WEIGHTS_DIR, OUTPUTS_DIR
+# from .thresholds import (
+#     BOX_THRESHOLD_DEFAULT,
+#     THRESHOLD_LADDER,
+#     PER_CLASS_THRESHOLDS,
+#     DEFAULT_THRESHOLD,
+#     MIN_ABSOLUTE_PIXELS,
+#     MAX_RELATIVE_AREA,
+#     MAX_ASPECT_RATIO,
+#     SOFT_NMS_SIGMA,
+#     SOFT_NMS_SCORE_GATE,
+#     DINO_CONFIG,
+#     DINO_CKPT,
+#     SAM_CKPT,
+# )
+# from .object_roles import (
+#     OBJECT_ROLES,
+#     DYNAMIC_LABELS,
+#     HARD_BLOCK_ROLES,
+#     SOFT_BLOCK_ROLES,
+#     OBSTACLE_ROLES_SET,
+#     PEDESTRIAN_SURFACES,
+#     VEHICLE_SURFACES,
+#     NON_WALKABLE_SURFACES,
+#     SAM_CLASSES,
+#     NAV_CRITICAL,
+#     NAV_CONDITIONAL,
+#     CONTEXT_ONLY,
+#     ACCESSIBILITY_FEATURES,
+#     ACCESSIBILITY_HAZARDS,
+#     SURFACE_QUALITY,
+#     get_output_category,
+# )
+# from .risk_config import (
+#     SEVERITY,
+#     DIST_WEIGHT,
+#     DEFAULT_SEVERITY,
+#     CAUTION_URGENT,
+#     CAUTION_HIGH,
+#     CAUTION_MEDIUM,
+#     CAUTION_LOW,
+# )
+# from .navigation_config import (
+#     COL_LEFT_END,
+#     COL_RIGHT_START,
+#     WALKABLE_COVERAGE,
+#     NON_WALKABLE_COVERAGE,
+#     SW_BLOCK_COVERAGE,
+#     SW_CROWD_COVERAGE,
+#     SW_FOOT_OVERLAP_RATIO,
+#     NARROW_RATIO,
+#     TIGHT_RATIO,
+# )
+# from .prompts import MULTI_PROMPTS, sanitise_prompt
+# from .labels import LABEL_DISPLAY_NAMES, get_display_label
+
 """
-Configuration module - central import point for all configs
+Configuration module — central import point for all configs
 """
 from .paths import BASE_DIR, WEIGHTS_DIR, OUTPUTS_DIR
 from .thresholds import (
@@ -32,7 +91,9 @@ from .object_roles import (
     ACCESSIBILITY_FEATURES,
     ACCESSIBILITY_HAZARDS,
     SURFACE_QUALITY,
+    SURFACE_PRIORITY,
     get_output_category,
+    get_size_weight,
 )
 from .risk_config import (
     SEVERITY,
@@ -42,6 +103,8 @@ from .risk_config import (
     CAUTION_HIGH,
     CAUTION_MEDIUM,
     CAUTION_LOW,
+    get_cluster_boost,
+    DIRECTION_SPILLOVER,
 )
 from .navigation_config import (
     COL_LEFT_END,
@@ -53,6 +116,7 @@ from .navigation_config import (
     SW_FOOT_OVERLAP_RATIO,
     NARROW_RATIO,
     TIGHT_RATIO,
+    UNCERTAIN_MIN_SURFACE_SCORE,
 )
-from .prompts import MULTI_PROMPTS, sanitise_prompt
+from .prompts import MULTI_PROMPTS, sanitise_prompt, CONFLICTING_SURFACE_PAIRS
 from .labels import LABEL_DISPLAY_NAMES, get_display_label

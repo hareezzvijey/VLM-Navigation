@@ -1,3 +1,10 @@
+# from .free_space import analyse_free_space, _merge_surface_masks
+# from .navigation import build_navigation_description, build_walkgpt_description
+# from .risk import compute_caution, compute_inter_object_relations
+# from .guidance import generate_guidance_text, format_accessibility_note, format_spatial_summary
+# from .decision import decide_action, get_direction_confidence
+
+
 from .free_space import analyse_free_space, _merge_surface_masks
 from .navigation import build_navigation_description, build_walkgpt_description
 from .risk import compute_caution, compute_inter_object_relations
